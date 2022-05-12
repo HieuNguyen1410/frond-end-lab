@@ -1,0 +1,26 @@
+{
+  "name": "testhtml",
+  "version": "1.0.0",
+  "description": "this is a test",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HieuNguyen1410/frond-end-lab.git"
+  },
+  "author": "HieuNguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HieuNguyen1410/frond-end-lab/issues"
+  },
+  "homepage": "https://github.com/HieuNguyen1410/frond-end-lab#readme",
+  "devDependencies": {
+    "lite": "^4.0.5",
+    "lite-server": "2.3",
+    "server": "^1.0.37"
+  }
+}
