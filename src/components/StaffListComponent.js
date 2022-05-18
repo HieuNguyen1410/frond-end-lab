@@ -13,7 +13,7 @@ const ListUser = function (){
         setUser(() =>(
             <div className="col-lg-6 col-md-6 col-12">
                 <Card>
-                    <CardBody>
+                    <CardBody className="cinfor">
                     <h4>{'Họ và tên: '+ result.name}</h4>
                     <p>{`Ngày sinh: ${dateFormat(result.doB,"dd/mm/yyyy")}`}</p>
                     <p>{`Ngày vào công ty: ${dateFormat(result.startDate,"dd/mm/yyyy")}`}</p>
@@ -29,16 +29,16 @@ const ListUser = function (){
 
 
     const Staffs = STAFFS.map((value,index) => (
-        <div className="col-lg-4 col-md-6 col-12" key={index} style={{paddingBottom: '10px'}}>
+        <div className="col-lg-4 col-md-6 col-12 list" key={index}>
             <Card onClick={() => handleClick(index)}>
-                <CardBody>
+                <CardBody className="cbody">
                     <CardTitle>{value.name}</CardTitle>
                 </CardBody>
             </Card>
         </div>
     ))
     return (
-        <div className="contain" style={{padding:15}}>
+        <div className="container contain" style={{padding:15}}>
         <div className="row">
             {Staffs}
         </div>
