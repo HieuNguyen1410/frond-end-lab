@@ -18,11 +18,6 @@ function App() {
         </div>
       </Navbar>
       <ListUser />
-    {/* <div className="container" style={{padding:15}}>
-      <div className="row">
-        <ListUser />
-      </div>
-    </div> */}
     </div>
   );
 }
