@@ -38,7 +38,7 @@ const ListUser = function (){
         </div>
     ))
     return (
-        <div className="container" style={{padding:15}}>
+        <div className="contain" style={{padding:15}}>
         <div className="row">
             {Staffs}
         </div>
