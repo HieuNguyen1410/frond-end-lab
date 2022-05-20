@@ -3,12 +3,6 @@ import { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardText,
-  CardBody,
-  CardTitle,
 } from "reactstrap";
 import { STAFFS } from "./shared/staffs";
 import ListUser from "../src/components/StaffListComponent";
