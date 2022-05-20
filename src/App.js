@@ -4,6 +4,11 @@ import {
   Navbar,
   NavbarBrand,
 } from "reactstrap";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import { STAFFS } from "./shared/staffs";
 import ListUser from "../src/components/StaffListComponent";
 import "./App.css";
