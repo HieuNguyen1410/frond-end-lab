@@ -1,0 +1,8 @@
+Ứng dụng gồm có 3 trang: Nhân viên, Phòng ban, Bảng Lương
+Trang Nhân viên: 
+-Hiển thị danh sách hình và tên của nhân viên 
+-Khi nhấp vào nhân viên sẽ hiển thị chi tiết về nhân viên đó 
+Trang Phòng Ban:
+-Hiển thị bộ phận và các chi tiết của bộ phận đó
+Trang Bảng Lương:
+-Hiển thị chi tiết bảng lương của toàn bộ nhân viên

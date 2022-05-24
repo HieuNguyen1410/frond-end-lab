@@ -1,0 +1,46 @@
+<mxfile host="65bd71144e">
+    <diagram id="K4loU95NEpMrIUJ_bb3c" name="Page-1">
+        <mxGraphModel dx="1118" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;b&gt;Logo&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="40" width="90" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Nhân viên" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="65" y="120" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Nhân viên" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Phòng ban" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Bảng luong" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="40" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Thông tin nhân viên 1" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="190" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;span style=&quot;color: rgb(240 , 240 , 240) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(42 , 42 , 42) ; display: inline ; float: none&quot;&gt;Thông tin nhân viên 2&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="190" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;span&gt;Thông tin nhân viên 3&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="294" y="190" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Thông tin nhân viên 4" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="190" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Thông tin nhân viên 5" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="190" width="121" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Thông tin nhân viên 6&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="190" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Footer&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="4" y="370" width="820" height="170" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

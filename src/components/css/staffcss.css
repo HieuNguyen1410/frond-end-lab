@@ -1,0 +1,14 @@
+.cbody{
+    text-align: center;
+    color: black;
+}
+.linkreact{
+    text-decoration: none;
+}
+.linkreact:hover{
+    text-decoration: none;
+}
+.list{
+    padding:10px
+}
+
