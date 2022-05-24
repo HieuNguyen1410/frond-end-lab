@@ -12,7 +12,6 @@ function Home(props) {
   return (
     <div className="container">
       <div className="row align-items-start">
-          Home
       </div>
     </div>
   );
