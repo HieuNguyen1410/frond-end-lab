@@ -1,7 +1,6 @@
-import { STAFFS } from "../shared/staffs";
+
 import React, { Component } from "react";
 import { Card, CardBody, CardTitle } from "reactstrap";
-import { useState } from "react";
 import dateFormat from "dateformat";
 
 class ListUser extends Component {
@@ -37,7 +36,7 @@ class ListUser extends Component {
       )
     }
     else{
-      return <div></div>
+      return <div>Bấm vào tên nhân viên để biết chi tiết</div>
     }
   }
 
