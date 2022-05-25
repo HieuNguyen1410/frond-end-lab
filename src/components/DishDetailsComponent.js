@@ -35,22 +35,6 @@ function RenderDish({ dish }) {
         </Card>
       </div>
     );
-    // const detail = dish.map((value, i) => (
-    //   <div className="col-12 col-md-5 m-1" key={value.id}>
-    //     <Card>
-    //       <CardImg
-    //         width="100%"
-    //         src={value.image}
-    //         alt={value.name}
-    //         style={{ backgroundColor: "#333" }}
-    //       />
-    //       <CardBody>
-    //         <CardTitle>{value.name}</CardTitle>
-    //         <CardText>{value.description}</CardText>
-    //       </CardBody>
-    //     </Card>
-    //   </div>
-    // ));
     return detail;
   } else {
     return <div></div>;
