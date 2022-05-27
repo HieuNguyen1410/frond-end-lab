@@ -41,6 +41,7 @@ class Main extends Component {
         <Route path="/staff/:staffId" component={StaffWithId}/>
         <Route exact path='/department' component={()=><DepartmentDetails departments={this.state.departments} />}/>
         <Route exact path='/salary' component={()=><Salary staffs={this.state.staffs}/>} />
+        
       </Switch>
       <Footer />
     </div>
