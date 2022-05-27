@@ -25,7 +25,7 @@ class ListUser extends Component {
     let menu = this.props.staffs.map((value) => (
       <div className="col-lg-2 col-md-4 col-6 list" key={value.id}>
         <Link to={`/staff/${value.id}`} className="linkreact">
-          <Card>
+          <Card className="card">
             <CardImg src={value.image} />
             <CardBody className="cbody">
               <CardTitle>{value.name}</CardTitle>
@@ -35,7 +35,7 @@ class ListUser extends Component {
       </div>
     ));
     return (
-      <div className="container">
+      <div className="container main">
         <div className="row">
             <div className="col-12">
                 <h2>Nhân viên</h2>

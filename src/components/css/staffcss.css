@@ -11,7 +11,16 @@
 .list{
     padding:10px
 }
-.container{
-    background-color:lightblue
+body{
+    background-image: linear-gradient(to right top, #e3b8d1, #dab3d5, #ceaeda, #beabe0, #a9a9e4, #97b0ee, #82b8f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
-
+.card{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.breadcrumb{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.card:hover {
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.7);
+  }

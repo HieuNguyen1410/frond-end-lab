@@ -31,10 +31,10 @@ class Salary extends React.Component {
       );
     });
     return (
-      <div className="container">
+      <div className="container main">
         <div className="row">
-          <Breadcrumb>
-            <BreadcrumbItem><Link to='/staff'>Nhân viên </Link> / Bảng lương</BreadcrumbItem>
+          <Breadcrumb >
+            <BreadcrumbItem className="breadcrumb"><Link to='/staff'>Nhân viên </Link> / Bảng lương</BreadcrumbItem>
           </Breadcrumb>
         </div>
         <div className="row">{salaryDetails}</div>

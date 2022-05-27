@@ -35,7 +35,7 @@ function RenderStaffDetails({ staffs }) {
 
 function StaffDetails(props) {
   return (
-    <div className="container" >
+    <div className="container main" >
       <div className="row">
         <div className="col-12">
 
