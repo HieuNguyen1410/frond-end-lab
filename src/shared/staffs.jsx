@@ -208,5 +208,10 @@ export const STAFFS =
             overTime: 10,
             image: '/assets/images/alberto.png',
         },
-
     ]
+
+const getItem = localStorage.getItem('Staffs') ? localStorage.getItem('Staffs') : '';
+if(getItem === ''){
+    localStorage.setItem('Staffs',JSON.stringify(STAFFS))
+}
+export const STAFFSLOCAL = localStorage.getItem('Staffs') ? JSON.parse(localStorage.getItem('Staffs')) : [];
