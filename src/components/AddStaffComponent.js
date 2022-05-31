@@ -1,9 +1,5 @@
 import React from "react";
 import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardImg,
   Button,
   Input,
   Modal,
