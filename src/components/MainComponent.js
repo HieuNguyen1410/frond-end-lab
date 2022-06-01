@@ -2,6 +2,8 @@ import DishDetails from "./DishDetailsComponent";
 import React, { Component } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import Menu from "./MenuComponent";
+import About from "./AboutComponent";
+import { addComment } from '../redux/ActionCreators';
 import {
   Card,
   CardImg,
@@ -44,6 +46,8 @@ class Main extends Component {
           comments={this.props.comments.filter(
             (comment) => comment.dishId === parseInt(match.params.dishId, 10)
           )}
+          addComment={this.props.addComment}
+          dishId={parseInt(match.params.dishId, 10)}
         />
       );
     };
@@ -57,6 +61,7 @@ class Main extends Component {
             path="/menu"
             component={() => <Menu dish={this.props.dishes} />}
           />
+          <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />} />
           <Route path="/menu/:dishId" component={DishWithId} />
           <Route exact path="/contactus" component={Contact} />
           <Redirect to="/home" />
@@ -75,5 +80,8 @@ const mapStateToProps = (state) => {
     promotions: state.promotions,
   };
 };
+const mapDispatchToProps = (dispatch) => ({
+  addComment:(dishId,rating,author,comment) => dispatch(addComment(dishId,rating,author,comment))
+})
 
-export default connect(mapStateToProps)(Main);
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Main));
