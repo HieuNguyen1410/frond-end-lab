@@ -20,6 +20,7 @@ import { Control, LocalForm } from "react-redux-form";
 import Menu from "./MenuComponent";
 import { DISHES } from "../shared/dishes";
 import { Link } from "react-router-dom";
+import {Loading} from "./LoadingComponent";
 
 function RenderDish({ dish }) {
   if (dish != null) {
@@ -75,30 +76,48 @@ function RenderComments({ comments, dishId, addComment }) {
 }
 
 const DishDetails = (props) => {
-  return (
-    <div className="container">
-      <div className="row">
-        <Breadcrumb>
-          <BreadcrumbItem>
-            <Link to="/menu">Menu</Link>
-          </BreadcrumbItem>
-          <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
-        </Breadcrumb>
-        <div className="col-12">
-          <h3>{props.dish.name}</h3>
-          <hr />
+  if (props.isLoading) {
+    return (
+      <div className="container">
+        <div className="row">
+          <Loading />
         </div>
       </div>
-      <div className="row">
-        <RenderDish dish={props.dish} />
-        <RenderComments
-          comments={props.comments}
-          addComment={props.addComment}
-          dishId={props.dishId}
-        />
+    );
+  } else if (props.errMess) {
+    return (
+      <div className="container">
+        <div className="row">
+          <h4>{props.errMess}</h4>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else if(props.dish != null){
+    return (
+      <div className="container">
+        <div className="row">
+          <Breadcrumb>
+            <BreadcrumbItem>
+              <Link to="/menu">Menu</Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
+          </Breadcrumb>
+          <div className="col-12">
+            <h3>{props.dish.name}</h3>
+            <hr />
+          </div>
+        </div>
+        <div className="row">
+          <RenderDish dish={props.dish} />
+          <RenderComments
+            comments={props.comments}
+            addComment={props.addComment}
+            dishId={props.dishId}
+          />
+        </div>
+      </div>
+    );
+  }
 };
 
 class CommentForm extends Component {
@@ -127,7 +146,7 @@ class CommentForm extends Component {
       values.rating,
       values.author,
       values.comment
-    )
+    );
   }
 
   render() {
