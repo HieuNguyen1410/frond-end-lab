@@ -20,7 +20,8 @@ import { Control, LocalForm } from "react-redux-form";
 import Menu from "./MenuComponent";
 import { DISHES } from "../shared/dishes";
 import { Link } from "react-router-dom";
-import {Loading} from "./LoadingComponent";
+import { Loading } from "./LoadingComponent";
+import { baseUrl } from "../shared/baseUrl";
 
 function RenderDish({ dish }) {
   if (dish != null) {
@@ -29,7 +30,7 @@ function RenderDish({ dish }) {
         <Card>
           <CardImg
             width="100%"
-            src={dish.image}
+            src={baseUrl + dish.image}
             alt={dish.name}
             style={{ backgroundColor: "#333" }}
           />
@@ -45,7 +46,7 @@ function RenderDish({ dish }) {
     return <div></div>;
   }
 }
-function RenderComments({ comments, dishId, addComment }) {
+function RenderComments({ comments, dishId, postComment }) {
   if (comments != null) {
     return (
       <div className="col-12 col-md-5 m-1">
@@ -67,7 +68,7 @@ function RenderComments({ comments, dishId, addComment }) {
             );
           })}
         </ul>
-        <CommentForm dishId={dishId} addComment={addComment} />
+        <CommentForm dishId={dishId} postComment={postComment} />
       </div>
     );
   } else {
@@ -92,7 +93,7 @@ const DishDetails = (props) => {
         </div>
       </div>
     );
-  } else if(props.dish != null){
+  } else if (props.dish != null) {
     return (
       <div className="container">
         <div className="row">
@@ -111,7 +112,7 @@ const DishDetails = (props) => {
           <RenderDish dish={props.dish} />
           <RenderComments
             comments={props.comments}
-            addComment={props.addComment}
+            postComment={props.postComment}
             dishId={props.dishId}
           />
         </div>
@@ -141,7 +142,7 @@ class CommentForm extends Component {
 
   handleSubmit(values) {
     this.toggleModal();
-    this.props.addComment(
+    this.props.postComment(
       this.props.dishId,
       values.rating,
       values.author,
