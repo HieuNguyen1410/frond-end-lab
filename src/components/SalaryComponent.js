@@ -11,9 +11,6 @@ import { Link } from "react-router-dom";
 class Salary extends React.Component {
   render() {
     const salaryDetails = this.props.staffs.map((staff) => {
-      const salaryCal = Math.floor(
-        staff.salaryScale * 3000000 + staff.overTime * 200000
-      );
       return (
         <div className="col-lg-4 col-md-6 col-12 list" key={staff.id}>
           <Card>
@@ -23,7 +20,7 @@ class Salary extends React.Component {
               <p>Hệ số lương: {staff.salaryScale}</p>
               <p>Số ngày làm thêm: {staff.overTime}</p>
               <Breadcrumb>
-                <BreadcrumbItem>Lương: {salaryCal}</BreadcrumbItem>
+                <BreadcrumbItem>Lương: {staff.salary}</BreadcrumbItem>
               </Breadcrumb>
             </CardBody>
           </Card>

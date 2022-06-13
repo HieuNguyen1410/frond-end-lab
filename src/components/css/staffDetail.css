@@ -1,0 +1,48 @@
+
+
+body {
+	font-family: Montserrat, sans-serif;
+	
+	align-items: center;
+
+	height: auto;
+	margin: 0;
+
+}
+
+h3 {
+	margin: 10px 0;
+}
+
+.card-container {
+    background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #808080;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+}
+button.primary:hover {
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+
+  }
+
+.card-container .round {
+    width: 100%;
+}
+
+button.primary {
+	background-color: #FFD700;
+	border-radius: 3px;
+	color: black;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 10px;
+}
+
+button.primary.ghost {
+	background-color: #DC143C;
+    color:white
+}
