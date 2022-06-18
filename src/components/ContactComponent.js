@@ -1,15 +1,6 @@
 import React from "react";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Button,
-  Label,
-  Input,
-  Col,
-  Row,
-} from "reactstrap";
-import { Link } from "react-router-dom";
-import { Control, Form, Errors, actions } from "react-redux-form";
+import { Button, Label, Col, Row } from "reactstrap";
+import { Control, Form, Errors } from "react-redux-form";
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !val || val.length <= len;
@@ -37,7 +28,10 @@ class Contact extends React.Component {
             <h3>Send Us Your Feedback</h3>
           </div>
           <div className="col-12 col-md-9">
-            <Form model='feedback' onSubmit={(values) => this.handleSubmit(values)}>
+            <Form
+              model="feedback"
+              onSubmit={(values) => this.handleSubmit(values)}
+            >
               <Row className="form-group">
                 <Label htmlFor="firstname" md={2}>
                   First Name

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
   Card,
   CardImg,
-  CardImgOverlay,
   CardText,
   CardBody,
   CardTitle,
@@ -17,13 +16,12 @@ import {
   Col,
 } from "reactstrap";
 import { Control, LocalForm } from "react-redux-form";
-import Menu from "./MenuComponent";
-import { DISHES } from "../shared/dishes";
+
 import { Link } from "react-router-dom";
 import { Loading } from "./LoadingComponent";
 import { baseUrl } from "../shared/baseUrl";
 import { FadeTransform, Fade, Stagger } from "react-animation-components";
-function RenderDish({ dish }) {
+export function RenderDish({ dish }) {
   if (dish != null) {
     const detail = (
       <div className="col-12 col-md-5 m-1" key={dish.id}>
@@ -49,34 +47,32 @@ function RenderDish({ dish }) {
       </div>
     );
     return detail;
-  } else {
-    return <div></div>;
   }
 }
-function RenderComments({ comments, dishId, postComment }) {
+export function RenderComments({ comments, dishId, postComment }) {
   if (comments != null) {
     return (
       <div className="col-12 col-md-5 m-1">
         <h4>Comments</h4>
         <ul className="list-unstyled">
           <Stagger in>
-          {comments.map((comment, index) => {
-            return (
-              <Fade in>
-              <li key={index}>
-                <p>{comment.comment}</p>
-                <p>
-                  -- {comment.author},{" "}
-                  {new Intl.DateTimeFormat("en-US", {
-                    year: "numeric",
-                    month: "short",
-                    day: "2-digit",
-                  }).format(new Date(Date.parse(comment.date)))}
-                </p>
-              </li>
-              </Fade>
-            );    
-          })}
+            {comments.map((comment, index) => {
+              return (
+                <Fade in key={index}>
+                  <li >
+                    <p>{comment.comment}</p>
+                    <p>
+                      {comment.author},{" "}
+                      {new Intl.DateTimeFormat("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "2-digit",
+                      }).format(new Date(Date.parse(comment.date)))}
+                    </p>
+                  </li>
+                </Fade>
+              );
+            })}
           </Stagger>
         </ul>
         <CommentForm dishId={dishId} postComment={postComment} />
@@ -87,7 +83,7 @@ function RenderComments({ comments, dishId, postComment }) {
   }
 }
 
-const DishDetails = (props) => {
+ const DishDetails = (props) => {
   if (props.isLoading) {
     return (
       <div className="container">
@@ -136,13 +132,12 @@ class CommentForm extends Component {
   constructor(props) {
     super(props);
 
-    this.toggleModal = this.toggleModal.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-
     this.state = {
       isNavOpen: false,
       isModalOpen: false,
     };
+    this.toggleModal = this.toggleModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   toggleModal() {

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -16,7 +16,7 @@ import {
   Input,
 } from "reactstrap";
 import "../Header.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,

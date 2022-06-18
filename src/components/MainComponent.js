@@ -1,24 +1,15 @@
 import DishDetails from "./DishDetailsComponent";
 import React, { Component } from "react";
-import { Navbar, NavbarBrand } from "reactstrap";
+
 import Menu from "./MenuComponent";
 import About from "./AboutComponent";
 import {
-  addComment,
   fetchDishes,
   fetchComments,
   fetchPromos,
   postComment,
 } from "../redux/ActionCreators";
-import {
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardText,
-  CardBody,
-  CardTitle,
-  Fade,
-} from "reactstrap";
+
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Contact from "./ContactComponent";
@@ -29,9 +20,7 @@ import { actions } from "react-redux-form";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-  }
+
 
   componentDidMount() {
     this.props.fetchDishes();
